@@ -24,10 +24,10 @@
 
                 if($db->query($sql)){
                   update_product_qty($s_qty,$p_id);
-                  $session->msg('s',"Sale added. ");
+                  $session->msg('s',"Venda adicionada. ");
                   redirect('add_sale.php', false);
                 } else {
-                  $session->msg('d',' Sorry failed to add!');
+                  $session->msg('d',' Desculpe não foi possível adicionar!');
                   redirect('add_sale.php', false);
                 }
         } else {
@@ -45,9 +45,9 @@
         <div class="form-group">
           <div class="input-group">
             <span class="input-group-btn">
-              <button type="submit" class="btn btn-primary">Find It</button>
+              <button type="submit" class="btn btn-primary">Encontre</button>
             </span>
-            <input type="text" id="sug_input" class="form-control" name="title"  placeholder="Search for product name">
+            <input type="text" id="sug_input" class="form-control" name="title"  placeholder="Pesquise pelo nome do produto">
          </div>
          <div id="result" class="list-group"></div>
         </div>
@@ -61,7 +61,7 @@
       <div class="panel-heading clearfix">
         <strong>
           <span class="glyphicon glyphicon-th"></span>
-          <span>Sale Eidt</span>
+          <span>Venda Editar</span>
        </strong>
       </div>
       <div class="panel-body">
@@ -69,11 +69,11 @@
          <table class="table table-bordered">
            <thead>
             <th> Item </th>
-            <th> Price </th>
-            <th> Qty </th>
+            <th> Preço </th>
+            <th> Qtd </th>
             <th> Total </th>
-            <th> Date</th>
-            <th> Action</th>
+            <th> Data</th>
+            <th> Accão</th>
            </thead>
              <tbody  id="product_info"> </tbody>
          </table>

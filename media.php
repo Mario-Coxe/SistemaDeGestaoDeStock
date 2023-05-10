@@ -10,7 +10,7 @@
   $photo = new Media();
   $photo->upload($_FILES['file_upload']);
     if($photo->process_media()){
-        $session->msg('s','photo has been uploaded.');
+        $session->msg('s','a foto foi carregada.');
         redirect('media.php');
     } else{
       $session->msg('d',join($photo->errors));
@@ -30,7 +30,7 @@
         <div class="panel panel-default">
           <div class="panel-heading clearfix">
             <span class="glyphicon glyphicon-camera"></span>
-            <span>All Photos</span>
+            <span>Todas as fotos</span>
             <div class="pull-right">
               <form class="form-inline" action="media.php" method="POST" enctype="multipart/form-data">
               <div class="form-group">
@@ -39,7 +39,7 @@
                     <input type="file" name="file_upload" multiple="multiple" class="btn btn-primary btn-file"/>
                  </span>
 
-                 <button type="submit" name="submit" class="btn btn-default">Upload</button>
+                 <button type="submit" name="submit" class="btn btn-default">Carregar</button>
                </div>
               </div>
              </form>
@@ -50,10 +50,10 @@
               <thead>
                 <tr>
                   <th class="text-center" style="width: 50px;">#</th>
-                  <th class="text-center">Photo</th>
-                  <th class="text-center">Photo Name</th>
-                  <th class="text-center" style="width: 20%;">Photo Type</th>
-                  <th class="text-center" style="width: 50px;">Actions</th>
+                  <th class="text-center">foto</th>
+                  <th class="text-center">Nome da foto</th>
+                  <th class="text-center" style="width: 20%;">Tipo de foto</th>
+                  <th class="text-center" style="width: 50px;">Ações</th>
                 </tr>
               </thead>
                 <tbody>
@@ -70,7 +70,7 @@
                   <?php echo $media_file['file_type'];?>
                 </td>
                 <td class="text-center">
-                  <a href="delete_media.php?id=<?php echo (int) $media_file['id'];?>" class="btn btn-danger btn-xs"  title="Edit">
+                  <a href="delete_media.php?id=<?php echo (int) $media_file['id'];?>" class="btn btn-danger btn-xs"  title="Editar">
                     <span class="glyphicon glyphicon-trash"></span>
                   </a>
                 </td>

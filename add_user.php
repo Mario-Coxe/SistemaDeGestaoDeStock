@@ -24,11 +24,11 @@
         $query .=")";
         if($db->query($query)){
           //sucess
-          $session->msg('s',"User account has been creted! ");
+          $session->msg('s',"A conta do usuário foi criada! ");
           redirect('add_user.php', false);
         } else {
           //failed
-          $session->msg('d',' Sorry failed to create account!');
+          $session->msg('d',' Desculpe, falha ao criar conta!');
           redirect('add_user.php', false);
         }
    } else {
@@ -44,23 +44,23 @@
       <div class="panel-heading">
         <strong>
           <span class="glyphicon glyphicon-th"></span>
-          <span>Add New User</span>
+          <span>Adicionar novo usuário/span>
        </strong>
       </div>
       <div class="panel-body">
         <div class="col-md-6">
           <form method="post" action="add_user.php">
             <div class="form-group">
-                <label for="name">Name</label>
-                <input type="text" class="form-control" name="full-name" placeholder="Full Name">
+                <label for="name">Nome</label>
+                <input type="text" class="form-control" name="full-name" placeholder="Nome completo">
             </div>
             <div class="form-group">
-                <label for="username">Username</label>
+                <label for="username">Nome de usuário</label>
                 <input type="text" class="form-control" name="username" placeholder="Username">
             </div>
             <div class="form-group">
-                <label for="password">Password</label>
-                <input type="password" class="form-control" name ="password"  placeholder="Password">
+                <label for="password">Senha</label>
+                <input type="password" class="form-control" name ="password"  placeholder="Senha">
             </div>
             <div class="form-group">
               <label for="level">User Role</label>
@@ -71,7 +71,7 @@
                 </select>
             </div>
             <div class="form-group clearfix">
-              <button type="submit" name="add_user" class="btn btn-primary">Add User</button>
+              <button type="submit" name="add_user" class="btn btn-primary">Adicionar Usuário</button>
             </div>
         </form>
         </div>

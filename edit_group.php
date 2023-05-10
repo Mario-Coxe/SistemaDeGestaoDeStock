@@ -7,7 +7,7 @@
 <?php
   $e_group = find_by_id('user_groups',(int)$_GET['id']);
   if(!$e_group){
-    $session->msg("d","Missing Group id.");
+    $session->msg("d","ID do grupo ausente.");
     redirect('group.php');
   }
 ?>
@@ -27,11 +27,11 @@
         $result = $db->query($query);
          if($result && $db->affected_rows() === 1){
           //sucess
-          $session->msg('s',"Group has been updated! ");
+          $session->msg('s',"O grupo foi atualizado! ");
           redirect('edit_group.php?id='.(int)$e_group['id'], false);
         } else {
           //failed
-          $session->msg('d',' Sorry failed to updated Group!');
+          $session->msg('d',' Desculpe, falha ao atualizar o grupo!');
           redirect('edit_group.php?id='.(int)$e_group['id'], false);
         }
    } else {
@@ -48,18 +48,18 @@
      <?php echo display_msg($msg); ?>
       <form method="post" action="edit_group.php?id=<?php echo (int)$e_group['id'];?>" class="clearfix">
         <div class="form-group">
-              <label for="name" class="control-label">Group Name</label>
+              <label for="name" class="control-label">Nome do grupo</label>
               <input type="name" class="form-control" name="group-name" value="<?php echo remove_junk(ucwords($e_group['group_name'])); ?>">
         </div>
         <div class="form-group">
-              <label for="level" class="control-label">Group Level</label>
+              <label for="level" class="control-label">Nível do Grupo</label>
               <input type="number" class="form-control" name="group-level" value="<?php echo (int)$e_group['group_level']; ?>">
         </div>
         <div class="form-group">
           <label for="status">Status</label>
               <select class="form-control" name="status">
-                <option <?php if($e_group['group_status'] === '1') echo 'selected="selected"';?> value="1"> Active </option>
-                <option <?php if($e_group['group_status'] === '0') echo 'selected="selected"';?> value="0">Deactive</option>
+                <option <?php if($e_group['group_status'] === '1') echo 'selected="selected"';?> value="1"> Ativo </option>
+                <option <?php if($e_group['group_status'] === '0') echo 'selected="selected"';?> value="0">Desativado</option>
               </select>
         </div>
         <div class="form-group clearfix">

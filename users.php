@@ -20,21 +20,21 @@
       <div class="panel-heading clearfix">
         <strong>
           <span class="glyphicon glyphicon-th"></span>
-          <span>Users</span>
+          <span>Usuário</span>
        </strong>
-         <a href="add_user.php" class="btn btn-info pull-right">Add New User</a>
+         <a href="add_user.php" class="btn btn-info pull-right">Adicionar Novo Usuário</a>
       </div>
      <div class="panel-body">
       <table class="table table-bordered table-striped">
         <thead>
           <tr>
             <th class="text-center" style="width: 50px;">#</th>
-            <th>Name </th>
-            <th>Username</th>
-            <th class="text-center" style="width: 15%;">User Role</th>
+            <th>Nome </th>
+            <th>Nome de usuário</th>
+            <th class="text-center" style="width: 15%;">Papel do usuário</th>
             <th class="text-center" style="width: 10%;">Status</th>
-            <th style="width: 20%;">Last Login</th>
-            <th class="text-center" style="width: 100px;">Actions</th>
+            <th style="width: 20%;">Último Login</th>
+            <th class="text-center" style="width: 100px;">Ações</th>
           </tr>
         </thead>
         <tbody>
@@ -54,10 +54,10 @@
            <td><?php echo read_date($a_user['last_login'])?></td>
            <td class="text-center">
              <div class="btn-group">
-                <a href="edit_user.php?id=<?php echo (int)$a_user['id'];?>" class="btn btn-xs btn-warning" data-toggle="tooltip" title="Edit">
+                <a href="edit_user.php?id=<?php echo (int)$a_user['id'];?>" class="btn btn-xs btn-warning" data-toggle="tooltip" title="Editar">
                   <i class="glyphicon glyphicon-pencil"></i>
                </a>
-                <a href="delete_user.php?id=<?php echo (int)$a_user['id'];?>" class="btn btn-xs btn-danger" data-toggle="tooltip" title="Remove">
+                <a href="delete_user.php?id=<?php echo (int)$a_user['id'];?>" class="btn btn-xs btn-danger" data-toggle="tooltip" title="Remover">
                   <i class="glyphicon glyphicon-remove"></i>
                 </a>
                 </div>

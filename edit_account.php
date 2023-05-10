@@ -10,7 +10,7 @@
   $user_id = (int)$_POST['user_id'];
   $photo->upload($_FILES['file_upload']);
   if($photo->process_user($user_id)){
-    $session->msg('s','photo has been uploaded.');
+    $session->msg('s','A foto foi carregada.');
     redirect('edit_account.php');
     } else{
       $session->msg('d',join($photo->errors));
@@ -30,10 +30,10 @@
             $sql = "UPDATE users SET name ='{$name}', username ='{$username}' WHERE id='{$id}'";
     $result = $db->query($sql);
           if($result && $db->affected_rows() === 1){
-            $session->msg('s',"Acount updated ");
+            $session->msg('s',"Conta atualizada ");
             redirect('edit_account.php', false);
           } else {
-            $session->msg('d',' Sorry failed to updated!');
+            $session->msg('d',' Desculpe falha ao atualizar!');
             redirect('edit_account.php', false);
           }
     } else {
@@ -52,7 +52,7 @@
         <div class="panel-heading">
           <div class="panel-heading clearfix">
             <span class="glyphicon glyphicon-camera"></span>
-            <span>Change My photo</span>
+            <span>Alterar minha foto</span>
           </div>
         </div>
         <div class="panel-body">
@@ -67,7 +67,7 @@
               </div>
               <div class="form-group">
                 <input type="hidden" name="user_id" value="<?php echo $user['id'];?>">
-                 <button type="submit" name="submit" class="btn btn-warning">Change</button>
+                 <button type="submit" name="submit" class="btn btn-warning">Mudar</button>
               </div>
              </form>
             </div>
@@ -84,16 +84,16 @@
       <div class="panel-body">
           <form method="post" action="edit_account.php?id=<?php echo (int)$user['id'];?>" class="clearfix">
             <div class="form-group">
-                  <label for="name" class="control-label">Name</label>
+                  <label for="name" class="control-label">Nome</label>
                   <input type="name" class="form-control" name="name" value="<?php echo remove_junk(ucwords($user['name'])); ?>">
             </div>
             <div class="form-group">
-                  <label for="username" class="control-label">Username</label>
+                  <label for="username" class="control-label">Nome de usuário</label>
                   <input type="text" class="form-control" name="username" value="<?php echo remove_junk(ucwords($user['username'])); ?>">
             </div>
             <div class="form-group clearfix">
-                    <a href="change_password.php" title="change password" class="btn btn-danger pull-right">Change Password</a>
-                    <button type="submit" name="update" class="btn btn-info">Update</button>
+                    <a href="change_password.php" title="change password" class="btn btn-danger pull-right">Alterar a senha</a>
+                    <button type="submit" name="update" class="btn btn-info">Atualizar</button>
             </div>
         </form>
       </div>

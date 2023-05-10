@@ -19,10 +19,10 @@ $sales = find_all_sale();
         <div class="panel-heading clearfix">
           <strong>
             <span class="glyphicon glyphicon-th"></span>
-            <span>All Sales</span>
+            <span>Todas as Vendas</span>
           </strong>
           <div class="pull-right">
-            <a href="add_sale.php" class="btn btn-primary">Add sale</a>
+            <a href="add_sale.php" class="btn btn-primary">Adicionar venda</a>
           </div>
         </div>
         <div class="panel-body">
@@ -31,10 +31,10 @@ $sales = find_all_sale();
               <tr>
                 <th class="text-center" style="width: 50px;">#</th>
                 <th> Product name </th>
-                <th class="text-center" style="width: 15%;"> Quantity</th>
+                <th class="text-center" style="width: 15%;"> Quantidade</th>
                 <th class="text-center" style="width: 15%;"> Total </th>
-                <th class="text-center" style="width: 15%;"> Date </th>
-                <th class="text-center" style="width: 100px;"> Actions </th>
+                <th class="text-center" style="width: 15%;"> Data</th>
+                <th class="text-center" style="width: 100px;"> Ações </th>
              </tr>
             </thead>
            <tbody>
@@ -47,10 +47,10 @@ $sales = find_all_sale();
                <td class="text-center"><?php echo $sale['date']; ?></td>
                <td class="text-center">
                   <div class="btn-group">
-                     <a href="edit_sale.php?id=<?php echo (int)$sale['id'];?>" class="btn btn-warning btn-xs"  title="Edit" data-toggle="tooltip">
+                     <a href="edit_sale.php?id=<?php echo (int)$sale['id'];?>" class="btn btn-warning btn-xs"  title="Editar" data-toggle="tooltip">
                        <span class="glyphicon glyphicon-edit"></span>
                      </a>
-                     <a href="delete_sale.php?id=<?php echo (int)$sale['id'];?>" class="btn btn-danger btn-xs"  title="Delete" data-toggle="tooltip">
+                     <a href="delete_sale.php?id=<?php echo (int)$sale['id'];?>" class="btn btn-danger btn-xs"  title="Deletar" data-toggle="tooltip">
                        <span class="glyphicon glyphicon-trash"></span>
                      </a>
                   </div>

@@ -29,11 +29,11 @@
         $query .=")";
         if($db->query($query)){
           //sucess
-          $session->msg('s',"Group has been creted! ");
+          $session->msg('s',"Grupo foi criado! ");
           redirect('add_group.php', false);
         } else {
           //failed
-          $session->msg('d',' Sorry failed to create Group!');
+          $session->msg('d',' Desculpe falha ao criar Grupo!');
           redirect('add_group.php', false);
         }
    } else {
@@ -50,22 +50,22 @@
      <?php echo display_msg($msg); ?>
       <form method="post" action="add_group.php" class="clearfix">
         <div class="form-group">
-              <label for="name" class="control-label">Group Name</label>
+              <label for="name" class="control-label">Nome do grupo</label>
               <input type="name" class="form-control" name="group-name">
         </div>
         <div class="form-group">
-              <label for="level" class="control-label">Group Level</label>
+              <label for="level" class="control-label">Nível do Grupo</label>
               <input type="number" class="form-control" name="group-level">
         </div>
         <div class="form-group">
           <label for="status">Status</label>
             <select class="form-control" name="status">
               <option value="1">Active</option>
-              <option value="0">Deactive</option>
+              <option value="0">Desativado</option>
             </select>
         </div>
         <div class="form-group clearfix">
-                <button type="submit" name="add" class="btn btn-info">Update</button>
+                <button type="submit" name="add" class="btn btn-info">Actualizar</button>
         </div>
     </form>
 </div>

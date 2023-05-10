@@ -20,7 +20,7 @@ $results = '';
     endif;
 
   } else {
-    $session->msg("d", "Select dates");
+    $session->msg("d", "Selecione as datas");
     redirect('sales_report.php', false);
   }
 ?>
@@ -28,8 +28,8 @@ $results = '';
 <html lang="en-US">
  <head>
    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-   <title>Default Page Title</title>
-     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css"/>
+   <title>Título da página padrão</title>
+     <link rel="stylesheet" href="libs/css/bootstrap.min.css"/>
    <style>
    @media print {
      html,body{

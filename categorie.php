@@ -15,10 +15,10 @@
       $sql  = "INSERT INTO categories (name)";
       $sql .= " VALUES ('{$cat_name}')";
       if($db->query($sql)){
-        $session->msg("s", "Successfully Added New Category");
+        $session->msg("s", "Nova categoria adicionada com sucesso");
         redirect('categorie.php',false);
       } else {
-        $session->msg("d", "Sorry Failed to insert.");
+        $session->msg("d", "Desculpe Falha ao inserir.");
         redirect('categorie.php',false);
       }
    } else {
@@ -40,15 +40,15 @@
         <div class="panel-heading">
           <strong>
             <span class="glyphicon glyphicon-th"></span>
-            <span>Add New Category</span>
+            <span>Adicionar nova categoria</span>
          </strong>
         </div>
         <div class="panel-body">
           <form method="post" action="categorie.php">
             <div class="form-group">
-                <input type="text" class="form-control" name="categorie-name" placeholder="Category Name">
+                <input type="text" class="form-control" name="categorie-name" placeholder="Nome da Categoria">
             </div>
-            <button type="submit" name="add_cat" class="btn btn-primary">Add Category</button>
+            <button type="submit" name="add_cat" class="btn btn-primary">Adicionar categoria</button>
         </form>
         </div>
       </div>
@@ -58,7 +58,7 @@
       <div class="panel-heading">
         <strong>
           <span class="glyphicon glyphicon-th"></span>
-          <span>All Categories</span>
+          <span>Todas as categorias</span>
        </strong>
       </div>
         <div class="panel-body">
@@ -66,8 +66,8 @@
             <thead>
                 <tr>
                     <th class="text-center" style="width: 50px;">#</th>
-                    <th>Categories</th>
-                    <th class="text-center" style="width: 100px;">Actions</th>
+                    <th>Categorias</th>
+                    <th class="text-center" style="width: 100px;">Acções</th>
                 </tr>
             </thead>
             <tbody>
@@ -77,10 +77,10 @@
                     <td><?php echo remove_junk(ucfirst($cat['name'])); ?></td>
                     <td class="text-center">
                       <div class="btn-group">
-                        <a href="edit_categorie.php?id=<?php echo (int)$cat['id'];?>"  class="btn btn-xs btn-warning" data-toggle="tooltip" title="Edit">
+                        <a href="edit_categorie.php?id=<?php echo (int)$cat['id'];?>"  class="btn btn-xs btn-warning" data-toggle="tooltip" title="Editar">
                           <span class="glyphicon glyphicon-edit"></span>
                         </a>
-                        <a href="delete_categorie.php?id=<?php echo (int)$cat['id'];?>"  class="btn btn-xs btn-danger" data-toggle="tooltip" title="Remove">
+                        <a href="delete_categorie.php?id=<?php echo (int)$cat['id'];?>"  class="btn btn-xs btn-danger" data-toggle="tooltip" title="Remover">
                           <span class="glyphicon glyphicon-trash"></span>
                         </a>
                       </div>

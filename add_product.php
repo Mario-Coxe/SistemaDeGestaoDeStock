@@ -29,10 +29,10 @@
      $query .=")";
      $query .=" ON DUPLICATE KEY UPDATE name='{$p_name}'";
      if($db->query($query)){
-       $session->msg('s',"Product added ");
+       $session->msg('s',"Produto adicionado ");
        redirect('add_product.php', false);
      } else {
-       $session->msg('d',' Sorry failed to added!');
+       $session->msg('d',' Desculpe não foi adicionado!');
        redirect('product.php', false);
      }
 
@@ -56,7 +56,7 @@
         <div class="panel-heading">
           <strong>
             <span class="glyphicon glyphicon-th"></span>
-            <span>Add New Product</span>
+            <span>Adicionar novo produto</span>
          </strong>
         </div>
         <div class="panel-body">
@@ -67,14 +67,14 @@
                   <span class="input-group-addon">
                    <i class="glyphicon glyphicon-th-large"></i>
                   </span>
-                  <input type="text" class="form-control" name="product-title" placeholder="Product Title">
+                  <input type="text" class="form-control" name="product-title" placeholder="Título do produto">
                </div>
               </div>
               <div class="form-group">
                 <div class="row">
                   <div class="col-md-6">
                     <select class="form-control" name="product-categorie">
-                      <option value="">Select Product Category</option>
+                      <option value="">Selecione a categoria do produto</option>
                     <?php  foreach ($all_categories as $cat): ?>
                       <option value="<?php echo (int)$cat['id'] ?>">
                         <?php echo $cat['name'] ?></option>
@@ -83,7 +83,7 @@
                   </div>
                   <div class="col-md-6">
                     <select class="form-control" name="product-photo">
-                      <option value="">Select Product Photo</option>
+                      <option value="">Selecione a foto do produto</option>
                     <?php  foreach ($all_photo as $photo): ?>
                       <option value="<?php echo (int)$photo['id'] ?>">
                         <?php echo $photo['file_name'] ?></option>
@@ -100,7 +100,7 @@
                      <span class="input-group-addon">
                       <i class="glyphicon glyphicon-shopping-cart"></i>
                      </span>
-                     <input type="number" class="form-control" name="product-quantity" placeholder="Product Quantity">
+                     <input type="number" class="form-control" name="product-quantity" placeholder="Quantidade de produto">
                   </div>
                  </div>
                  <div class="col-md-4">
@@ -108,7 +108,7 @@
                      <span class="input-group-addon">
                        <i class="glyphicon glyphicon-usd"></i>
                      </span>
-                     <input type="number" class="form-control" name="buying-price" placeholder="Buying Price">
+                     <input type="number" class="form-control" name="buying-price" placeholder="Preço de compra">
                      <span class="input-group-addon">.00</span>
                   </div>
                  </div>
@@ -117,13 +117,13 @@
                       <span class="input-group-addon">
                         <i class="glyphicon glyphicon-usd"></i>
                       </span>
-                      <input type="number" class="form-control" name="saleing-price" placeholder="Selling Price">
+                      <input type="number" class="form-control" name="saleing-price" placeholder="Preço de venda">
                       <span class="input-group-addon">.00</span>
                    </div>
                   </div>
                </div>
               </div>
-              <button type="submit" name="add_product" class="btn btn-danger">Add product</button>
+              <button type="submit" name="add_product" class="btn btn-danger">Adicionar produto</button>
           </form>
          </div>
         </div>

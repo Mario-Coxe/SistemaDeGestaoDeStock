@@ -2,28 +2,28 @@
   <li>
     <a href="home.php">
       <i class="glyphicon glyphicon-home"></i>
-      <span>Dashboard</span>
+      <span>Painel</span>
     </a>
   </li>
   <li>
     <a href="#" class="submenu-toggle">
       <i class="glyphicon glyphicon-th-list"></i>
-       <span>Sales</span>
+       <span>Vendas</span>
       </a>
       <ul class="nav submenu">
-         <li><a href="sales.php">Manage Sales</a> </li>
-         <li><a href="add_sale.php">Add Sale</a> </li>
+         <li><a href="sales.php">Gerenciar Vendas</a> </li>
+         <li><a href="add_sale.php">Adicionar venda</a> </li>
      </ul>
   </li>
   <li>
     <a href="#" class="submenu-toggle">
       <i class="glyphicon glyphicon-signal"></i>
-       <span>Sales Report</span>
+       <span>Relatório de vendas</span>
       </a>
       <ul class="nav submenu">
-        <li><a href="sales_report.php">Sales by dates </a></li>
-        <li><a href="monthly_sales.php">Monthly sales</a></li>
-        <li><a href="daily_sales.php">Daily sales</a> </li>
+        <li><a href="sales_report.php">Vendas por datas </a></li>
+        <li><a href="monthly_sales.php">Vendas mensais</a></li>
+        <li><a href="daily_sales.php">Vendas diárias</a> </li>
       </ul>
   </li>
 </ul>

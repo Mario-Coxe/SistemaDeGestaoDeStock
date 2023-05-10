@@ -17,9 +17,9 @@
     <div class="panel-heading clearfix">
       <strong>
         <span class="glyphicon glyphicon-th"></span>
-        <span>Groups</span>
+        <span>Grupos</span>
      </strong>
-       <a href="add_group.php" class="btn btn-info pull-right btn-sm"> Add New Group</a>
+       <a href="add_group.php" class="btn btn-info pull-right btn-sm"> Adicionar novo grupo</a>
     </div>
      <div class="panel-body">
       <table class="table table-bordered">
@@ -27,9 +27,9 @@
           <tr>
             <th class="text-center" style="width: 50px;">#</th>
             <th>Group Name</th>
-            <th class="text-center" style="width: 20%;">Group Level</th>
+            <th class="text-center" style="width: 20%;">Nível do Grupo</th>
             <th class="text-center" style="width: 15%;">Status</th>
-            <th class="text-center" style="width: 100px;">Actions</th>
+            <th class="text-center" style="width: 100px;">Ações</th>
           </tr>
         </thead>
         <tbody>
@@ -42,17 +42,17 @@
            </td>
            <td class="text-center">
            <?php if($a_group['group_status'] === '1'): ?>
-            <span class="label label-success"><?php echo "Active"; ?></span>
+            <span class="label label-success"><?php echo "Ativo"; ?></span>
           <?php else: ?>
-            <span class="label label-danger"><?php echo "Deactive"; ?></span>
+            <span class="label label-danger"><?php echo "Desativado"; ?></span>
           <?php endif;?>
            </td>
            <td class="text-center">
              <div class="btn-group">
-                <a href="edit_group.php?id=<?php echo (int)$a_group['id'];?>" class="btn btn-xs btn-warning" data-toggle="tooltip" title="Edit">
+                <a href="edit_group.php?id=<?php echo (int)$a_group['id'];?>" class="btn btn-xs btn-warning" data-toggle="tooltip" title="Editar">
                   <i class="glyphicon glyphicon-pencil"></i>
                </a>
-                <a href="delete_group.php?id=<?php echo (int)$a_group['id'];?>" class="btn btn-xs btn-danger" data-toggle="tooltip" title="Remove">
+                <a href="delete_group.php?id=<?php echo (int)$a_group['id'];?>" class="btn btn-xs btn-danger" data-toggle="tooltip" title="Remover">
                   <i class="glyphicon glyphicon-remove"></i>
                 </a>
                 </div>
